@@ -1,8 +1,16 @@
 ### REFERENCE
 
+#### POSTGRES
+
+- Install UUID extension
+> CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+- Verify installation
+> SELECT * FROM pg_extension;
+
 #### SEQUELIZE
 
-- [INSTALL](https://sequelize.org/docs/v6/getting-started/#installing)
-- [DIALECT](https://sequelize.org/docs/v6/other-topics/dialect-specific-things/)
-- [DATA TYPE](https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
-- [DATA TYPE](https://sequelize.org/docs/v7/other-topics/other-data-types)
+- [Install](https://sequelize.org/docs/v6/getting-started/#installing)
+- [Dialect](https://sequelize.org/docs/v6/other-topics/dialect-specific-things/)
+- [Data Type](https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
+- [Data Type](https://sequelize.org/docs/v7/other-topics/other-data-types)
