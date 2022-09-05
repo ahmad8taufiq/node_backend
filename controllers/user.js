@@ -1,12 +1,15 @@
 const express = require('express')
 const response = require('../helpers/response')
+const db = require('../models/index')
 const user = express.Router()
 
-user.get('/', (req, res) => {
+user.get('/', async (req, res) => {
+    const user = await db.User.findAll()
+    
     const body = {
         success: true,
-        message: 'UserController: Hello world',
-        data: null,
+        message: '',
+        data: user,
     }
     
     return response(res, body)

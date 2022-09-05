@@ -1,4 +1,5 @@
 'use strict';
+const short = require('short-uuid');
 const moment = require('moment')
 const now = moment().unix()
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
      * }], {});
     */
    await queryInterface.bulkInsert('Users', [{
+    id: short().generate(),
     name: 'Ahmad',
     phone: '08123456789',
     email: 'ahmad@gmail.com',
