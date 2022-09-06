@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "db:migrate": "sequelize db:migrate",
     "db:migrate:undo": "sequelize db:migrate:undo:all",
     "db:seed": "sequelize db:seed:all",
@@ -22,5 +23,8 @@
     "pg": "^8.8.0",
     "sequelize": "^6.21.4",
     "short-uuid": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
