@@ -13,6 +13,12 @@ module.exports = {
       phone: {
         type: Sequelize.STRING
       },
+      form: {
+        type: Sequelize.ENUM,
+        values: ['form', 'google'],
+        defaultValue: 'form',
+        allowNull: false,
+      },
       email: {
         type: Sequelize.STRING
       },
