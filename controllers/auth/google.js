@@ -15,9 +15,7 @@ google.get('/logout', googleIsUnauthenticated, (req, res) => {
     })
 })
 
-google.get('/callback', passport.authenticate('google', { failureRedirect: '/failed' }), (req, res) => {
-    res.redirect('/api/google/success')
-})
+google.get('/callback', passport.authenticate('google', { successReturnToOrRedirect: '/api/google/success', failureRedirect: '/api/google/failed' }))
 
 google.get("/success", googleIsAuthenticated, (req, res) => {
     res.json({isAuthencticated: req.isAuthenticated(), isUnauthenticated: req.isUnauthenticated()});
