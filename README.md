@@ -1,5 +1,9 @@
 ### REFERENCE
 
+#### MONITOR
+
+- Service status monitoring tools, go to path: /status
+
 #### POSTGRES
 
 - Install UUID extension
