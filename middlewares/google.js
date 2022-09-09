@@ -1,5 +1,3 @@
-const response = require('../cores/response')
-
 const googleIsAuthenticated = (req, res, next) => {
     if (req.isAuthenticated()) {
         return next();

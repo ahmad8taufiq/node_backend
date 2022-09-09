@@ -1,5 +1,5 @@
 const express = require('express')
-const passport = require('passport');
+const passport = require('passport')
 const { googleIsAuthenticated, googleIsUnauthenticated } = require('../../middlewares/google')
 const response = require('../../cores/response')
 
@@ -15,7 +15,10 @@ google.get('/logout', googleIsUnauthenticated, (req, res) => {
     })
 })
 
-google.get('/callback', passport.authenticate('google', { successReturnToOrRedirect: '/api/google/success', failureRedirect: '/api/google/failed' }))
+google.get('/callback', passport.authenticate('google', {
+    successReturnToOrRedirect: '/api/google/success',
+    failureRedirect: '/api/google/failed'
+}))
 
 google.get("/success", googleIsAuthenticated, (req, res) => {
     res.json({isAuthencticated: req.isAuthenticated(), isUnauthenticated: req.isUnauthenticated()});

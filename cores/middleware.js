@@ -2,10 +2,12 @@ const cors = require('cors')
 const passport = require('passport')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
-require('../config/passport')
+const compression = require('compression')
+require('../middlewares/passport')
 
 const middleware = (express, app) => {
     app.use(cors())
+    app.use(compression())
     app.use(express.json())
     app.use(express.urlencoded({ extended: true }))
     app.use(cookieParser())
