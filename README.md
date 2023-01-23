@@ -1,6 +1,7 @@
 ### SETUP
 
 - cp .env.example .env
+- generate token in https://bcrypt-generator.com
 - go to APIs & Services in your GCP Project, then create OAuth 2.0 Client IDs
 - configure .env
 - npm i
