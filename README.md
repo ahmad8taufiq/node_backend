@@ -1,3 +1,13 @@
+### SETUP
+
+- cp .env.example .env
+- go to APIs & Services in your GCP Project, then create OAuth 2.0 Client IDs
+- configure .env
+- npm i
+- npm install -g sequelize-cli
+- npm run db:setup
+- yarn dev
+
 ### REFERENCE
 
 #### MONITOR
