@@ -8,11 +8,8 @@ const google = express.Router()
 google.get('/login', passport.authenticate('google', { scope: ['email', 'profile']}))
 
 google.get('/logout', googleIsUnauthenticated, (req, res) => {
-    req.session.destroy(function(err) {
-        if(!err) {
-            res.redirect('/')
-        }
-    })
+    req.session = null;
+    res.redirect('https://accounts.google.com/logout');
 })
 
 google.get('/callback', passport.authenticate('google', {
@@ -21,6 +18,7 @@ google.get('/callback', passport.authenticate('google', {
 }))
 
 google.get("/success", googleIsAuthenticated, (req, res) => {
+    console.log({ user: req.user })
     res.json({isAuthencticated: req.isAuthenticated(), isUnauthenticated: req.isUnauthenticated()});
 })
 
