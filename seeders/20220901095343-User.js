@@ -19,7 +19,7 @@ module.exports = {
     phone: '08123456789',
     form: 'form',
     email: 'ahmadtaufiq879@gmail.com',
-    password: 'password',
+    password: '$2a$12$RWqAKmzNclytlb5Buk95seRryN3fX4.jIlKBzNPlKf5qqIqTZt5Xu',
     createdAt: now,
     createdBy: 'system',
     updatedAt: now,
