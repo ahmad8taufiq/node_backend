@@ -6,4 +6,4 @@ const response = (res, body) => {
     })
 }
 
-module.exports = response
+export default response

@@ -1,4 +1,4 @@
-const User = require('../models/user')
+import User from '../models/user.js'
 
 class UserRepository {
     findOrCreate(id, data) {
@@ -19,4 +19,4 @@ class UserRepository {
     }
 }
 
-module.exports = UserRepository
+export default UserRepository

@@ -1,10 +1,10 @@
-const express = require('express')
-const response = require('../cores/response')
-// const db = require('../models/index')
-const UserRepository = require('../repository/user')
-const user = express.Router()
+import express from 'express'
+import response from '../cores/response.js'
+import UserRepository from '../repository/user.js'
 
 const userRepo = new UserRepository
+
+const user = express.Router()
 
 user.get('/', async (req, res) => {
     // const user = await db.User.findAll()
@@ -34,4 +34,4 @@ user.get('/:id', async (req, res) => {
 const userController = express.Router()
 userController.use('/users', user)
 
-module.exports = userController
+export default userController

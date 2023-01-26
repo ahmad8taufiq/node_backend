@@ -1,10 +1,8 @@
-const express = require('express')
+import express from 'express'
+import middleware from './cores/middleware.js'
+import router from './cores/router.js'
+
 const app = express()
-const router = require('./cores/router')
-const middleware = require('./cores/middleware')
-
-require('dotenv').config()
-
 middleware(express, app)
 router(app)
 

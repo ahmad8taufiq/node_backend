@@ -1,7 +1,7 @@
-const api = require('../routes/api')
+import api from '../routes/api.js'
 
 const router = (app) => {
     app.use(api)
 }
 
-module.exports = router
+export default router

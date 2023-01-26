@@ -14,4 +14,4 @@ const googleIsUnauthenticated = (req, res, next) => {
     return next();
 }
 
-module.exports = { googleIsAuthenticated, googleIsUnauthenticated }
+export { googleIsAuthenticated, googleIsUnauthenticated }
