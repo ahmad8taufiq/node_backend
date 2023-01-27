@@ -4,7 +4,7 @@ import {
     googleIsAuthenticated,
     googleIsUnauthenticated }
 from '../../middlewares/googleMiddleware.js'
-import response from '../../cores/response.js'
+import { response}  from '../../cores/response.js'
 
 const google = express.Router()
 
@@ -26,13 +26,7 @@ google.get("/success", googleIsAuthenticated, (req, res) => {
 })
 
 google.get('/failed', async (req, res) => {
-    const body = {
-        success: false,
-        message: 'Unauthenticated',
-        data: null,
-    }
-    
-    return response(res, body)
+    return response(res, 200, body(false, 'Unauthenticated', null))
 })
 
 const googleController = express.Router()
