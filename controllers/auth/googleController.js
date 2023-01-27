@@ -1,6 +1,9 @@
 import express from 'express'
 import passport from 'passport'
-import { googleIsAuthenticated, googleIsUnauthenticated } from '../../middlewares/google.js'
+import {
+    googleIsAuthenticated,
+    googleIsUnauthenticated }
+from '../../middlewares/googleMiddleware.js'
 import response from '../../cores/response.js'
 
 const google = express.Router()

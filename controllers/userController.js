@@ -1,6 +1,6 @@
 import express from 'express'
 import response from '../cores/response.js'
-import UserRepository from '../repository/user.js'
+import UserRepository from '../repository/userRepository.js'
 
 const userRepo = new UserRepository
 

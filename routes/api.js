@@ -1,6 +1,6 @@
 import express from 'express'
-import userController from '../controllers/user.js';
-import googleController from '../controllers/auth/google.js';
+import userController from '../controllers/userController.js';
+import googleController from '../controllers/auth/googleController.js';
 
 const api = express.Router()
 
