@@ -1,21 +1,21 @@
 import User from '../models/userModel.js'
 
 class UserRepository {
-    findOrCreate(id, data) {
-        return User.findOrCreate({
+    async findOrCreate(id, data) {
+        return await User.findOrCreate({
             where: { email: id },
             defaults: data,
         })
     }
     
-    gets() {
-        return User.findAll({
+    async gets() {
+        return await User.findAll({
             attributes: { exclude: ['password'] },
         })
     }
 
-    get(id) {
-        return User.findByPk(id)
+    async get(id) {
+        return await User.findByPk(id)
     }
 }
 
