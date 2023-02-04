@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-module.exports = {
+const development = {
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
@@ -9,5 +9,7 @@ module.exports = {
     port: process.env.DB_PORT,
     dialect: process.env.DB_DRIVER,
     seederStorage: "sequelize",
-  }
-};
+  },
+}
+
+module.exports = development

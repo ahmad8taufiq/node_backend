@@ -13,4 +13,4 @@ const response = (res, status, body) => {
     })
 }
 
-export { body, response }
+module.exports = { body, response }

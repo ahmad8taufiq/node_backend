@@ -1,6 +1,4 @@
-import { config } from 'dotenv'
-
-config()
+require('dotenv').config()
 
 const googleCredential = {
     clientID: process.env.GOOGLE_CLIENT_ID,
@@ -8,4 +6,4 @@ const googleCredential = {
     callbackURL: process.env.GOOGLE_CALLBACK,
 }
 
-export default googleCredential
+module.exports = googleCredential

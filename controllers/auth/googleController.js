@@ -1,10 +1,10 @@
-import express from 'express'
-import passport from 'passport'
-import {
+const express = require('express')
+const passport = require('passport')
+const {
     googleIsAuthenticated,
     googleIsUnauthenticated }
-from '../../middlewares/googleMiddleware.js'
-import { response}  from '../../cores/response.js'
+= require('../../middlewares/googleMiddleware.js')
+const { response } = require('../../cores/response.js')
 
 const google = express.Router()
 
@@ -32,4 +32,4 @@ google.get('/failed', async (req, res) => {
 const googleController = express.Router()
 googleController.use('/google', google)
 
-export default googleController
+module.exports = googleController

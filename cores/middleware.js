@@ -1,14 +1,14 @@
-import cors from 'cors'
-import moment from 'moment'
-import passport from 'passport'
-import shortUUID from 'short-uuid'
-import session from 'express-session'
-import compression from 'compression'
-import cookieParser from 'cookie-parser'
-import UserRepository from '../repository/userRepository.js'
-import expressStatusMonitor from 'express-status-monitor'
-import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
-import googleCredential from '../config/oauth2.js'
+const cors = require('cors')
+const moment = require('moment')
+const passport = require('passport')
+const shortUUID = require('short-uuid')
+const session = require('express-session')
+const compression = require('compression')
+const cookieParser = require('cookie-parser')
+const UserRepository = require('../repository/userRepository.js')
+const expressStatusMonitor = require('express-status-monitor')
+const GoogleStrategy = require('passport-google-oauth20').Strategy
+const googleCredential = require('../config/oauth2.js')
 
 const middleware = (express, app) => {
     app.use(cors())
@@ -37,6 +37,7 @@ const middleware = (express, app) => {
             const data = {
                 id: shortUUID().generate(),
                 name: profile.displayName,
+                username: null,
                 phone: null,
                 form: 'google',
                 email: profile.emails[0].value,
@@ -66,4 +67,4 @@ const middleware = (express, app) => {
     app.use(passport.session());
 }
 
-export default middleware
+module.exports = middleware

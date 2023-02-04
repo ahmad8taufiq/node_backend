@@ -2,6 +2,7 @@
 const short = require('short-uuid');
 const moment = require('moment')
 const now = moment().unix()
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
@@ -16,6 +17,7 @@ module.exports = {
    await queryInterface.bulkInsert('Users', [{
     id: short().generate(),
     name: 'Ahmad',
+    username: 'ahmad',
     phone: '08123456789',
     form: 'form',
     email: 'ahmadtaufiq879@gmail.com',

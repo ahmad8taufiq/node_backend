@@ -1,10 +1,10 @@
-import express from 'express'
-import userController from '../controllers/userController.js';
-import googleController from '../controllers/auth/googleController.js';
+const express = require('express')
+const userController = require('../controllers/userController.js')
+const googleController = require('../controllers/auth/googleController.js')
 
 const api = express.Router()
 
 api.use('/api', googleController)
 api.use('/api', userController)
 
-export default api
+module.exports = api
